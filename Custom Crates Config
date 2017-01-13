@@ -1,0 +1,84 @@
+#Chances are 1 out of 100 and the lower the chance is the rarer the item is.
+Crates:
+  Vote:
+    ParticleEffect:
+      enabled: true
+      onlywhenopening: false
+      particle: LAVA
+    Key:
+      material: TRIPWIRE_HOOK
+      name: '&b&lVote'
+      enchanted: true
+      lore:
+      - '&c&oVote Charm'
+      - '&7Use at /Warp Crates'
+    Sound:
+      movingSound: WOOD_CLICK
+      prizeSound: BAT_TAKEOFF
+      closeInventorySound: CHEST_CLOSE
+    LeftClickInv:
+      enabled: true
+      enablechancelore: true
+      lore:
+        - '&7Chance: &a&l%chance%%'
+      name: '&cItems for %crate%'
+    OpenInv:
+      name: '&cOpening %crate%'
+    PrizeItem:
+      material: REDSTONE_TORCH_ON
+      name: '&aPrize'
+      enchanted: false
+    PreCommands:
+    - msg:%prefix%Now opening %crate% crate.
+    BlockType: ENDER_CHEST
+    Items:
+      1:
+        enchanted: false
+        material: PAPER
+        name: '&e20k'
+        chance: 100
+        amount: 1
+        commands:
+        - 'eco give %player% 20000'
+      2:
+        enchanted: true
+        material: DIAMOND_SWORD
+        name: '&eKit PvP'
+        chance: 50
+        amount: 1
+        commands:
+        - 'kit pvp %player%'
+      3:
+        enchanted: true
+        material: DIAMOND_HELMET
+        name: '&eKit Armor'
+        chance: 50
+        amount: 1
+        commands:
+        - 'kit armor %player%'
+      4:
+        enchanted: false
+        material: PAPER
+        name: '&e100k'
+        chance: 20
+        amount: 1
+        commands:
+        - 'eco give %player% 100000'
+        - msg:%prefix%&7&oYou have opened a Default Crate and recieved &a&l100k&7!
+      5:
+        enchanted: false
+        material: BOOK
+        chance: 10
+        name: '&e$50 Rank'
+        commands:
+        - msg:%prefix%&7&oYou have opened a Default Crate and recieved a &a&l$50 Donor Rank&7!
+      6:
+        enchanted: true
+        material: SKULL_ITEM:3
+        amount: 2
+        playerhead: CoderDayton
+        name: '&eThe Developer''s Head'
+        chance: 50
+        commands:
+        - 'give %player% playerskull 1 player:iCodeTits'
+        - 'give %player% playerskull 1 player:CoderDayton'
